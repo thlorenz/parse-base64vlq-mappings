@@ -27,7 +27,7 @@ console.log(mappings);
 
 ## Caveat
 
-Main intended use is either for testing generated mappings and to add offsets to them.
+Main intended use is either for testing generated mappings or to add offsets to existing mappings.
 
 Therefore is is assumed that all mappings relate to the same generated/original file, i.e. no information but 
 information but generated line and column vs. original line and column is preserved.
