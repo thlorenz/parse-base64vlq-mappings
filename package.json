@@ -1,6 +1,6 @@
 {
   "name": "parse-base64vlq-mappings",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "description": "Parses out base64 VLQ encoded mappings.",
   "main": "parse-base64vlq-mappings.js",
   "scripts": {
