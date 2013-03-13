@@ -1,4 +1,4 @@
-# parse-base64vlq-mappings
+# parse-base64vlq-mappings [![build status](https://secure.travis-ci.org/thlorenz/parse-base64vlq-mappings.png)](http://travis-ci.org/thlorenz/parse-base64vlq-mappings)
 
 Parses out base64 VLQ encoded mappings.
 

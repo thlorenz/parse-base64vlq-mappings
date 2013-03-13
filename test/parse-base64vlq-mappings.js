@@ -33,7 +33,6 @@ test('parsing generated one to one mappings', function (t) {
   add.forEach(gen.addMapping.bind(gen))
   var addedMappings = add.map(function (m) { return { generated: m.generated, original: m.original } })
 
-  console.log(gen.toJSON().mappings)
   var mappings = gen.toJSON().mappings
     , parsed = parse(mappings)
 
