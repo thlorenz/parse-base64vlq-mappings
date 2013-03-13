@@ -81,5 +81,3 @@ module.exports = function parse(str_) {
   }
   return mappings;
 };
-
-var maps =  ';AAAA;CAAA,IAAA,CAAA;CAAA;CAAA,CAAA,CAAQ,CAAA,CAAR,IAAS;CACG,EAAR,CAAA,GAAO,IAAP,IAAY;CADhB,EAAQ;;CAAR,CAGA,GAAA,OAAA;;CAHA,CAMA,GAAA,SAAA;CANA';
