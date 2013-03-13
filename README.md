@@ -31,3 +31,5 @@ Main intended use is either for testing generated mappings or to add offsets to 
 
 Therefore is is assumed that all mappings relate to the same generated/original file, i.e. only information about
 generated line and column vs. original line and column is preserved.
+
+Additionally all name information is disregarded during the parse.

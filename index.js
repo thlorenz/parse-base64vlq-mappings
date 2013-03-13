@@ -13,8 +13,6 @@ module.exports = function parse(str_) {
     , previousGeneratedColumn =  0
     , previousOriginalLine    =  0
     , previousOriginalColumn  =  0
-    , previousSource          =  0
-    , previousName            =  0
     , mappingSeparator = /^[,;]/
     , mappings = []
     , str = str_ 
@@ -44,7 +42,6 @@ module.exports = function parse(str_) {
         // Original source.
         temp = base64VLQ.decode(str);
 
-        previousSource += temp.value;
         str = temp.rest;
         if (str.length === 0 || mappingSeparator.test(str.charAt(0))) {
           throw new Error('Found a source, but no line and column');
@@ -67,13 +64,14 @@ module.exports = function parse(str_) {
         previousOriginalColumn = mapping.original.column;
         str = temp.rest;
 
-        if (str.length > 0 && !mappingSeparator.test(str.charAt(0))) {
+        // XXX: all name information is currently lost which may not be desirable
+        /*if (str.length > 0 && !mappingSeparator.test(str.charAt(0))) {
           // Original name.
           temp = base64VLQ.decode(str);
           mapping.name = this._names.at(previousName + temp.value);
           previousName += temp.value;
           str = temp.rest;
-        }
+        }*/
       }
 
       mappings.push(mapping);
