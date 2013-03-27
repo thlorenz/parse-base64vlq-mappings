@@ -28,10 +28,11 @@ test('parsing generated one to one mappings', function (t) {
     { generated: { line: 5, column: 0 },
       original: { line: 5, column: 0 },
       source: 'foo.js',
-      name: null } ]    
+      name: null },
+    { generated: { line: 6, column: 0 } } ]
 
   add.forEach(gen.addMapping.bind(gen))
-  var addedMappings = add.map(function (m) { return { generated: m.generated, original: m.original } })
+  var addedMappings = add.map(function (m) { return m.original ? { generated: m.generated, original: m.original } : { generated: m.generated } })
 
   var mappings = gen.toJSON().mappings
     , parsed = parse(mappings)
@@ -57,10 +58,11 @@ test('parsing generated offset mappings', function (t) {
       { generated: { line: 24, column: 0 },
         original: { line: 4, column: 5 },
         source: 'foo.js',
-        name: null }]
+        name: null },
+      { generated: { line: 25, column: 0 } } ]
 
   add.forEach(gen.addMapping.bind(gen))
-  var addedMappings = add.map(function (m) { return { generated: m.generated, original: m.original } })
+  var addedMappings = add.map(function (m) { return m.original ? { generated: m.generated, original: m.original } : { generated: m.generated } })
 
   var mappings = gen.toJSON().mappings
     , parsed = parse(mappings)
