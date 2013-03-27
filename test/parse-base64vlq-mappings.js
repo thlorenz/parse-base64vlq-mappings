@@ -6,7 +6,7 @@ var test = require('trap').test
   , Generator = require('source-map').SourceMapGenerator
 
 
-test('parsing generated one to one mappings', function (t) {
+test('parsing generated one to one mappings with last line having no original', function (t) {
   var gen = new Generator({ file: 'foo.js' })
   var add = [ 
     { generated: { line: 1, column: 0 },
@@ -40,7 +40,7 @@ test('parsing generated one to one mappings', function (t) {
   t.deepEqual(parsed, addedMappings, 'parses out added mappings')
 });
 
-test('parsing generated offset mappings', function (t) {
+test('parsing generated offset mappings with last line having no original', function (t) {
   var gen = new Generator({ file: 'foo.js' })
   var add = [ 
       { generated: { line: 21, column: 0 },
