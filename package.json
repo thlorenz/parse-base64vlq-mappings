@@ -2,7 +2,7 @@
   "name": "parse-base64vlq-mappings",
   "version": "0.1.3",
   "description": "Parses out base64 VLQ encoded mappings.",
-  "main": "parse-base64vlq-mappings.js",
+  "main": "index.js",
   "scripts": {
     "test": "node-trap test/*.js"
   },
