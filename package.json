@@ -4,7 +4,7 @@
   "description": "Parses out base64 VLQ encoded mappings.",
   "main": "index.js",
   "scripts": {
-    "test": "node-trap test/*.js"
+    "test": "tap test/*.js"
   },
   "repository": {
     "type": "git",
@@ -14,7 +14,7 @@
   "dependencies": {},
   "devDependencies": {
     "source-map": "~0.1.9",
-    "trap": "~0.4.2"
+    "tap": "~0.4.3"
   },
   "keywords": [
     "base64",
